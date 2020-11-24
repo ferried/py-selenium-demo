@@ -2,7 +2,7 @@
 Author: ferried
 Email: harlancui@outlook.com
 Date: 2020-11-24 13:47:50
-LastEditTime: 2020-11-24 14:50:53
+LastEditTime: 2020-11-24 14:52:27
 LastEditors: ferried
 Description: Basic description
 FilePath: /isee-verification-code/main.py
@@ -25,7 +25,6 @@ class VerificationCode:
     def get_pictures(self):
         self.driver.get('http://jiaowu.tsc.edu.cn/tscjw/cas/login.action')  # 打开登陆页面
         self.driver.fullscreen_window()
-        self.driver.save_screenshot('pictures.png')  # 全屏截图
         page_snap_obj = Image.open('pictures.png')
         img = self.find_element('#randpic')  # 验证码元素位置
         '''username'''
